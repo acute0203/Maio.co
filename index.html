@@ -29,10 +29,43 @@ http://www.tooplate.com/view/2075-digital-team
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/basic.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script>
+	var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+	</script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
+	<script>
+	var message = getUrlParameter("message");
+	if (message=="ok"){
+		Swal.fire({
+            icon: 'success',
+            title: '表單傳送完成！',
+			text: '客服人員將會後續與您聯繫！',
+            timer: 2000,
+			showConfirmButton: false,
+        })
+	}
+	</script>
 	<!-- preloader section -->
 	<div class="preloader">
 		<div class="sk-spinner sk-spinner-circle">
