@@ -1,0 +1,11 @@
+{
+  "name": "Maio 麥點數位科技",
+  "short_name": "Maio",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#002659",
+  "background_color": "#002659",
+  "display": "standalone"
+}
